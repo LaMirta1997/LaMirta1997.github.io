@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martina Belen - CV Online</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Botón toggle día/noche -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <div class="toggle-icon">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+        </div>
+    </button>
+
+    <!-- Header animado -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <svg viewbox="0 0 450 100" xmlns="http://www.w3.org/2000/svg">
+                    <path id="nombre_path" d="M39.10 12.90Q45.25 12.90 48.70 16.47Q52.15 20.05 52.15 26.75L52.15 48.40L45.65 48.40L45.65 
+                    27.00Q45.65 22.85 43.48 20.72Q41.30 18.60 37.80 18.60Q33.90 18.60 31.57 20.80Q29.25 23.00 29.25 27.55L29.25 48.40L22.75 
+                    48.40L22.75 27.00Q22.75 22.80 20.73 20.70Q18.70 18.60 15.20 18.60Q11.25 18.60 8.88 20.82Q6.50 23.05 6.50 27.55L6.50 
+                    48.40L0 48.40L0 13.40L6.30 13.40L6.30 18.00Q7.90 15.55 10.65 14.22Q13.40 12.90 17.00 12.90Q20.70 12.90 23.45 14.30Q26.20 
+                    15.70 27.60 18.25Q29.35 15.70 32.38 14.30Q35.40 12.90 39.10 12.90ZM86.75 21.70L86.75 48.40L80.80 48.40L80.80 44.95Q79.25 
+                    46.85 76.97 47.80Q74.70 48.75 71.95 48.75Q68.05 48.75 64.97 47.05Q61.90 45.35 60.17 42.25Q58.45 39.15 58.45 35.05Q58.45 
+                    30.95 60.17 27.87Q61.90 24.80 64.97 23.10Q68.05 21.40 71.95 21.40Q74.55 21.40 76.72 22.30Q78.90 23.20 80.50 24.95L80.50 
+                    21.70L86.75 21.70M72.65 43.40Q76.10 43.40 78.35 41.10Q80.60 38.80 80.60 35.05Q80.60 31.30 78.35 29.00Q76.10 26.70 72.65 
+                    26.70Q69.20 26.70 66.97 29.00Q64.75 31.30 64.75 35.05Q64.75 38.80 66.97 41.10Q69.20 43.40 72.65 43.40ZM100.90 25.60Q103.60 
+                    21.40 110.40 21.40L110.40 27.35Q109.60 27.20 108.95 27.20Q105.30 27.20 103.25 29.32Q101.20 31.45 101.20 35.45L101.20 
+                    48.40L94.95 48.40L94.95 21.70L100.90 21.70L100.90 25.60ZM130.95 46.95Q129.85 47.85 128.28 48.30Q126.70 48.75 124.95 
+                    48.75Q120.55 48.75 118.15 46.45Q115.75 44.15 115.75 39.75L115.75 15.80L122 15.80L122 21.90L129.15 21.90L129.15 26.90L122 
+                    26.90L122 39.60Q122 41.55 122.97 42.57Q123.95 43.60 125.70 43.60Q127.80 43.60 129.20 42.50L130.95 46.95ZM136.10 21.70L142.35 
+                    21.70L142.35 48.40L136.10 48.40L136.10 21.70M139.25 17.30Q137.55 17.30 136.40 16.22Q135.25 15.15 135.25 13.55Q135.25 11.95 
+                    136.40 10.88Q137.55 9.80 139.25 9.80Q140.95 9.80 142.10 10.82Q143.25 11.85 143.25 13.40Q143.25 15.05 142.13 16.17Q141 
+                    17.30 139.25 17.30ZM165.70 21.40Q170.75 21.40 173.80 24.35Q176.85 27.30 176.85 33.10L176.85 48.40L170.60 48.40L170.60 
+                    33.90Q170.60 30.40 168.95 28.62Q167.30 26.85 164.25 26.85Q160.80 26.85 158.80 28.92Q156.80 31.00 156.80 34.90L156.80 
+                    48.40L150.55 48.40L150.55 21.70L156.50 21.70L156.50 25.15Q158.05 23.30 160.40 22.35Q162.75 21.40 165.70 21.40ZM210.90 
+                    21.70L210.90 48.40L204.95 48.40L204.95 44.95Q203.40 46.85 201.13 47.80Q198.85 48.75 196.10 48.75Q192.20 48.75 189.13 
+                    47.05Q186.05 45.35 184.32 42.25Q182.60 39.15 182.60 35.05Q182.60 30.95 184.32 27.87Q186.05 24.80 189.13 23.10Q192.20 
+                    21.40 196.10 21.40Q198.70 21.40 200.88 22.30Q203.05 23.20 204.65 24.95L204.65 21.70L210.90 21.70M196.80 43.40Q200.25 
+                    43.40 202.50 41.10Q204.75 38.80 204.75 35.05Q204.75 31.30 202.50 29.00Q200.25 26.70 196.80 26.70Q193.35 26.70 191.13 
+                    29.00Q188.90 31.30 188.90 35.05Q188.90 38.80 191.13 41.10Q193.35 43.40 196.80 43.40ZM233.50 13.40L240 13.40L240 42.90L258.30 
+                    42.90L258.30 48.40L233.50 48.40L233.50 13.40ZM274.85 48.75Q270.80 48.75 267.55 47Q264.30 45.25 262.48 42.13Q260.65 39 
+                    260.65 35.05Q260.65 31.10 262.48 28.00Q264.30 24.90 267.55 23.15Q270.80 21.40 274.85 21.40Q278.95 21.40 282.20 23.15Q285.45 
+                    24.90 287.27 28.00Q289.10 31.10 289.10 35.05Q289.10 39 287.27 42.13Q285.45 45.25 282.20 47Q278.95 48.75 274.85 48.75M274.85 
+                    43.40Q278.30 43.40 280.55 41.10Q282.80 38.80 282.80 35.05Q282.80 31.30 280.55 29.00Q278.30 26.70 274.85 26.70Q271.40 26.70 
+                    269.18 29.00Q266.95 31.30 266.95 35.05Q266.95 38.80 269.18 41.10Q271.40 43.40 274.85 43.40ZM309.90 21.40Q313.80 21.40 316.88 
+                    23.10Q319.95 24.80 321.70 27.90Q323.45 31.00 323.45 35.05Q323.45 39.10 321.70 42.22Q319.95 45.35 316.88 47.05Q313.80 48.75 
+                    309.90 48.75Q304.50 48.75 301.35 45.15L301.35 58.10L295.10 58.10L295.10 21.70L301.05 21.70L301.05 25.20Q302.60 23.30 304.88 
+                    22.35Q307.15 21.40 309.90 21.40M309.20 43.40Q312.65 43.40 314.88 41.10Q317.10 38.80 317.10 35.05Q317.10 31.30 314.88 
+                    29.00Q312.65 26.70 309.20 26.70Q306.95 26.70 305.15 27.72Q303.35 28.75 302.30 30.65Q301.25 32.55 301.25 35.05Q301.25 37.55 
+                    302.30 39.45Q303.35 41.35 305.15 42.38Q306.95 43.40 309.20 43.40ZM355.50 21.70L355.50 48.40L349.55 48.40L349.55 44.95Q348 
+                    46.85 345.73 47.80Q343.45 48.75 340.70 48.75Q336.80 48.75 333.73 47.05Q330.65 45.35 328.93 42.25Q327.20 39.15 327.20 
+                    35.05Q327.20 30.95 328.93 27.87Q330.65 24.80 333.73 23.10Q336.80 21.40 340.70 21.40Q343.30 21.40 345.48 22.30Q347.65 
+                    23.20 349.25 24.95L349.25 21.70L355.50 21.70M341.40 43.40Q344.85 43.40 347.10 41.10Q349.35 38.80 349.35 35.05Q349.35 
+                    31.30 347.10 29.00Q344.85 26.70 341.40 26.70Q337.95 26.70 335.73 29.00Q333.50 31.30 333.50 35.05Q333.50 38.80 335.73 
+                    41.10Q337.95 43.40 341.40 43.40ZM369.65 25.60Q372.35 21.40 379.15 21.40L379.15 27.35Q378.35 27.20 377.70 27.20Q374.05 
+                    27.20 372 29.32Q369.95 31.45 369.95 35.45L369.95 48.40L363.70 48.40L363.70 21.70L369.65 21.70L369.65 25.60ZM410.85 
+                    11.30L410.85 48.40L404.85 48.40L404.85 44.95Q403.30 46.85 401.03 47.80Q398.75 48.75 396 48.75Q392.15 48.75 389.08 47.05Q386 
+                    45.35 384.25 42.22Q382.50 39.10 382.50 35.05Q382.50 31.00 384.25 27.90Q386 24.80 389.08 23.10Q392.15 21.40 396 21.40Q398.65 
+                    21.40 400.85 22.30Q403.05 23.20 404.60 25.00L404.60 11.30L410.85 11.30M396.75 43.40Q399 43.40 400.80 42.38Q402.60 41.35 
+                    403.65 39.45Q404.70 37.55 404.70 35.05Q404.70 32.55 403.65 30.65Q402.60 28.75 400.80 27.72Q399 26.70 396.75 26.70Q394.50 
+                    26.70 392.70 27.72Q390.90 28.75 389.85 30.65Q388.80 32.55 388.80 35.05Q388.80 37.55 389.85 39.45Q390.90 41.35 392.70 42.38Q394.50 
+                    43.40 396.75 43.40ZM431.05 48.75Q427.00 48.75 423.75 47Q420.50 45.25 418.68 42.13Q416.85 39 416.85 35.05Q416.85 31.10 418.68 
+                    28.00Q420.50 24.90 423.75 23.15Q427.00 21.40 431.05 21.40Q435.15 21.40 438.40 23.15Q441.65 24.90 443.48 28.00Q445.30 31.10 
+                    445.30 35.05Q445.30 39 443.48 42.13Q441.65 45.25 438.40 47Q435.15 48.75 431.05 48.75M431.05 43.40Q434.50 43.40 436.75 
+                    41.10Q439.00 38.80 439.00 35.05Q439.00 31.30 436.75 29.00Q434.50 26.70 431.05 26.70Q427.60 26.70 425.38 29.00Q423.15 31.30 
+                    423.15 35.05Q423.15 38.80 425.38 41.10Q427.60 43.40 431.05 43.40Z"></path>
+                </svg>
+                <p class="hero-subtitle">Estudiante de Ingeniería en Sistemas</p>
+                <div class="hero-description">
+                    <p>Desarrolladora apasionada por la tecnología y la automatización</p>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#about" class="nav-link">Sobre mí</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#experience" class="nav-link">Experiencia</a>
+            <a href="#contact" class="nav-link">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección Sobre mí - Rediseñada -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-hero">
+                    <div class="about-content-wrapper">
+                        <div class="about-text-section">
+                            <h2 class="about-title">
+                                <span class="title-line">Sobre</span>
+                                <span class="title-line highlight">mí</span>
+                            </h2>
+                            <div class="about-description">
+                                <p class="about-intro-text">
+                                    Soy una <span class="highlight-text">estudiante apasionada</span> por la tecnología, 
+                                    con experiencia práctica en desarrollo y automatización de procesos. 
+                                    Mi formación combina conocimientos técnicos sólidos con una perspectiva económica 
+                                    que me permite entender el <span class="highlight-text">impacto empresarial</span> 
+                                    de las soluciones tecnológicas.
+                                </p>
+                                <p class="about-mission">
+                                    Mi misión es crear soluciones innovadoras que optimicen procesos y generen valor real.
+                                </p>
+                            </div>
+                        </div>
+                        
+                         <div class="about-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-details-grid">
+                        <div class="detail-card education-card" data-aos="slide-right">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Formación</h3>
+                                <div class="education-list">
+                                    <div class="education-item">
+                                        <span class="degree">Ing. en Sistemas</span>
+                                        <span class="status">En curso</span>
+                                    </div>
+                                    <div class="education-item">
+                                        <span class="degree">Bachiller en Economía</span>
+                                        <span class="status">Completado</span>
+                                    </div>
+                                    <div class="education-item">
+                                        <span class="degree">Técnico Programador</span>
+                                        <span class="status">Completado</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-card passion-card" data-aos="slide-left">
+                            <div class="card-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Pasiones</h3>
+                                <div class="passion-list">
+                                    <span class="passion-tag">Automatización</span>
+                                    <span class="passion-tag">Desarrollo Web</span>
+                                    <span class="passion-tag">Innovación</span>
+                                    <span class="passion-tag">Tecnología</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Skills -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title">Skills Técnicos</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Lenguajes de Programación</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Básico</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="40"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Desarrollo Web</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML</span>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CSS</span>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Bases de Datos & APIs</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">Básico</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="45"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">APIs</span>
+                                <span class="skill-level">Básico</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="40"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Experiencia -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <h2 class="section-title">Experiencia Profesional</h2>
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>RPA Developer</h3>
+                                <span class="timeline-duration">1 año</span>
+                            </div>
+                            <p class="timeline-description">
+                                Desarrollo y implementación de soluciones de automatización de procesos robóticos (RPA). 
+                                Experiencia en análisis de procesos, diseño de flujos automatizados y optimización de tareas repetitivas.
+                            </p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Automatización</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Análisis de procesos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>¿Interesado en colaborar?</h3>
+                        <p>Estoy siempre abierta a nuevas oportunidades y proyectos interesantes. 
+                           No dudes en contactarme para discutir cómo puedo contribuir a tu equipo.</p>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:martulopardo0@gmail.com" class="contact-button">
+                                <i class="fas fa-envelope"></i>
+                                <span>martulopardo0@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form class="form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Nombre</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" required></textarea>
+                                <label for="message">Mensaje</label>
+                            </div>
+                            <button type="submit" class="submit-button">
+                                <span>Enviar mensaje</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Martina Belen. Diseñado con pasión por la tecnología.</p>
+            <a href="mailto:martulopardo0@gmail.com" class="footer-email">martulopardo0@gmail.com</a>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+            
+            // Guardar preferencia en localStorage
+            const isDark = body.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Cargar tema guardado
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            body.className = savedTheme + '-theme';
+
+            // Animación de las barras de skills al hacer scroll
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-progress');
+                        skillBars.forEach(bar => {
+                            const width = bar.getAttribute('data-width');
+                            bar.style.width = width + '%';
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            const skillsSection = document.querySelector('.skills-section');
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+
+            // Animaciones de la sección About
+            const aboutObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                aboutObserver.observe(el);
+            });
+
+            // Smooth scroll para navegación
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Formulario de contacto
+            document.querySelector('.form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                const mailtoLink = `mailto:martulopardo0@gmail.com?subject=Contacto desde CV - ${name}&body=Nombre: ${name}%0AEmail: ${email}%0A%0AMensaje:%0A${message}`;
+                window.location.href = mailtoLink;
+            });
+        });
+    </script>
+</body>
+</html>
