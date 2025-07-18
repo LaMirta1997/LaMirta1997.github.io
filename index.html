@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martina Belen - CV Online</title>
-    <link rel="stylesheet" href="estilos.css">
+
+    <!-- SEO Meta Tags -->
+    <title>Martina Belen | CV Online</title>
+    <meta name="description" content="RPA Developer especializada en automatización de procesos con Python y Robocorp. Desarrolladora web con experiencia en JavaScript, HTML y CSS. Disponible para nuevos proyectos.">
+    <meta name="keywords" content="RPA Developer, Python, Robocorp, Desarrolladora Web, JavaScript, HTML, CSS, Automatización, Programación">
+    <meta name="author" content="Martina Belén Lopardo">
+
+    <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="dark-theme">
@@ -18,7 +25,7 @@
     </button>
 
     <!-- Header animado -->
-    <header class="hero">
+    <header class="hero" role="banner">
         <div class="hero-content">
             <div class="hero-text">
                 <svg viewbox="0 0 440 100" xmlns="http://www.w3.org/2000/svg">
@@ -78,19 +85,21 @@
                     26.27Q424.30 25.00 421.50 25.00Q418.70 25.00 416.47 26.27Q414.25 27.55 412.97 29.90Q411.70 32.25 411.70 35.25Q411.70 
                     38.25 412.97 40.60Q414.25 42.95 416.47 44.23Q418.70 45.50 421.50 45.50Z"></path>
                 </svg>
-                <p class="hero-subtitle">Estudiante de Ingeniería en Sistemas</p>
+                <h1 class="hero-subtitle">RPA Developer & Desarrolladora Web</h1>
                 <div class="hero-description">
-                    <p>Desarrolladora apasionada por la tecnología y la automatización</p>
+                    <p>Apasionada por la programación y la resolución de problemas</p>
                 </div>
             </div>
-            <div class="scroll-indicator">
+            <div class="scroll-indicator" role="button" aria-hidden="true">
                 <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </header>
 
+
+
     <!-- Navegación -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Navegación principal">
         <div class="nav-container">
             <a href="#about" class="nav-link">Sobre mí</a>
             <a href="#skills" class="nav-link">Skills</a>
@@ -101,7 +110,6 @@
 
 
 
-    <!-- Contenido principal -->
     <main>
         <!-- Sección SOBRE MI-->
         <section id="about" class="section about-section">
@@ -115,21 +123,20 @@
                             </h2>
                             <div class="about-description">
                                 <p class="about-intro-text">
-                                    Soy estudiante de <span class="highlight-text">Ingeniería en Sistemas</span> en la UTN, apasionada por la tecnología, 
-                                    con especial interés en la automatización y el desarrollo web. Actualmente me desempeño como RPA Developer utilizando 
-                                    <strong>Python y Robocorp</strong>, herramientas con las que he logrado <span class="highlight-text">automatizar procesos
-                                        que demoraban días</span>.
+                                    Soy <span class="highlight-text">RPA Developer</span> con experiencia en la automatización de procesos 
+                                    administrativos y técnicos utilizando <strong>Robocorp</strong> y <strong>Python</strong>. Me desempeño 
+                                    actualmente en el sector público, desarrollando soluciones que reducen tiempos operativos en más del 
+                                    50% mediante bots que integran archivos y sistemas.
                                 </p>
                                 <p class="about-mission">
-                                    Me interesa seguir explorando el desarrollo web, aprender nuevos lenguajes y participar de proyectos 
-                                    colaborativos que generen impacto. Mi formación técnica se complementa con una visión analítica 
-                                    gracias a mi recorrido en el bachiller en economía.
+                                    Me destaco por mi capacidad analítica, autonomía y entusiasmo por aprender. Mi objetivo es seguir 
+                                    creciendo profesionalmente y generar impacto mediante soluciones tecnológicas eficientes.
                                 </p>
                             </div>
                         </div>
                         
-                         <div class="about-image">
-                            <div class="image-placeholder">
+                        <div class="about-image">
+                            <div class="image-placeholder" role="img" aria-label="Foto de perfil">
                                 <i class="fas fa-user-circle"></i>
                             </div>
                         </div>
@@ -145,7 +152,7 @@
                                 <div class="education-list">
                                     <div class="education-item">
                                         <div class="degree">
-                                            <span class="degree-name">Ing. en Sistemas</span>
+                                            <span class="degree-name">Ingeniería en Sistemas</span>
                                             <span class="degree-place">Universidad Tecnologica Nacional - Regional Delta</span>
                                         </div>
                                         <span class="status">En curso</span>
@@ -168,8 +175,8 @@
                             </div>
                         </div>
                         
-                        <div class="detail-card passion-card" data-aos="slide-left">
-                            <div class="card-icon">
+                        <article class="detail-card passion-card" data-aos="slide-left">
+                            <div class="card-icon" aria-hidden="true">
                                 <i class="fas fa-heart"></i>
                             </div>
                             <div class="card-content">
@@ -181,7 +188,7 @@
                                     <span class="passion-tag">Tecnología</span>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -195,14 +202,14 @@
                 <h2 class="section-title">Skills Técnicos</h2>
                 <div class="skills-grid">
                     <!-- cate. Lenguajes de prog. -->
-                    <div class="skill-category">
+                    <article class="skill-category">
                         <h3>Lenguajes de Programación</h3>
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">Python</span>
                                 <span class="skill-level">Intermedio</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Python: 70%">
                                 <div class="skill-progress" data-width="70"></div>
                             </div>
                         </div>
@@ -211,21 +218,21 @@
                                 <span class="skill-name">JavaScript</span>
                                 <span class="skill-level">Básico</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript: 40%">
                                 <div class="skill-progress" data-width="40"></div>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
                     <!-- cate. Desarrollo Web -->
-                    <div class="skill-category">
+                    <article class="skill-category">
                         <h3>Desarrollo Web</h3>
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">HTML</span>
                                 <span class="skill-level">Avanzado</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML: 90%">
                                 <div class="skill-progress" data-width="90"></div>
                             </div>
                         </div>
@@ -234,21 +241,21 @@
                                 <span class="skill-name">CSS</span>
                                 <span class="skill-level">Avanzado</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="CSS: 85%">
                                 <div class="skill-progress" data-width="85"></div>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
                     <!-- cate. Bases de datos -->
-                    <div class="skill-category">
+                    <article class="skill-category">
                         <h3>Bases de Datos & APIs</h3>
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">SQL</span>
                                 <span class="skill-level">Básico</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="SQL: 40%">
                                 <div class="skill-progress" data-width="40"></div>
                             </div>
                         </div>
@@ -257,21 +264,21 @@
                                 <span class="skill-name">APIs</span>
                                 <span class="skill-level">Básico</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="APIs: 45%">
                                 <div class="skill-progress" data-width="45"></div>
                             </div>
                         </div>
-                    </div>
+                    </article>
                     
                     <!-- cate. Framework y librerias -->
-                    <div class="skill-category">
+                    <article class="skill-category">
                         <h3>Frameworks y Librerías</h3>
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">Tkinter</span>
                                 <span class="skill-level">Intermedio</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Tkinter: 60%">
                                 <div class="skill-progress" data-width="60"></div>
                             </div>
                         </div>
@@ -280,21 +287,21 @@
                                 <span class="skill-name">Pandas</span>
                                 <span class="skill-level">Básico</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Pandas: 45%">
                                 <div class="skill-progress" data-width="45"></div>
                             </div>
                         </div>
-                    </div>
+                    </article>
                     
                     <!-- cate. herramientas-->
-                    <div class="skill-category">
+                    <article class="skill-category">
                         <h3>Herramientas</h3>
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">GitHub</span>
                                 <span class="skill-level">Intermedio</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="GitHub: 60%">
                                 <div class="skill-progress" data-width="60"></div>
                             </div>
                         </div>
@@ -303,21 +310,21 @@
                                 <span class="skill-name">Trello</span>
                                 <span class="skill-level">Intermedio</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Trello: 65%">
                                 <div class="skill-progress" data-width="65"></div>
                             </div>
                         </div>
-                    </div>
+                    </article>
                     
                     <!-- cate. idiomas -->
-                    <div class="skill-category">
+                    <article class="skill-category">
                         <h3>Idiomas</h3>
                         <div class="skill-item">
                             <div class="skill-info">
                                 <span class="skill-name">Español</span>
                                 <span class="skill-level">Nativo</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Español: 100%">
                                 <div class="skill-progress" data-width="100"></div>
                             </div>
                         </div>
@@ -326,12 +333,25 @@
                                 <span class="skill-name">Ingles</span>
                                 <span class="skill-level">Nivel B2</span>
                             </div>
-                            <div class="skill-bar">
+                            <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Inglés: 70%">
                                 <div class="skill-progress" data-width="70"></div>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
+            </div>
+        </section>
+
+        <!-- Sección HABILIDADES PERSONALES -->
+        <section id="softskills" class="section softskills-section">
+            <div class="container">
+                <h2 class="section-title">Habilidades Personales</h2>
+                <ul class="softskills-list">
+                    <li>Capacidad analítica para detectar oportunidades de mejora</li>
+                    <li>Buena comunicación y trabajo colaborativo</li>
+                    <li>Autonomía en la resolución de tareas técnicas</li>
+                    <li>Compromiso con el aprendizaje continuo</li>
+                </ul>
             </div>
         </section>
 
@@ -344,7 +364,7 @@
                 <div class="proyectos-grid">
 
                     <!-- Proyecto 1, VialdsKids-->
-                    <div class="proyecto-item" data-aos="fade-up" data-aos-delay="200">
+                    <article class="proyecto-item" data-aos="fade-up" data-aos-delay="200">
                         <div class="proyecto-mockup">
                             <div class="compu-mockup">
                                 <div class="compu-screen">
@@ -383,25 +403,25 @@
                                 <span class="proyecto-tag">Diseño Web</span>
                             </div>
                             <div class="proyecto-botones">
-                                <a href="#" class="proyecto-button">
+                                <a href="#" class="proyecto-button" aria-label="Ver proyecto VialdKids">
                                     <span>Ver Proyecto</span>
-                                    <i class="fas fa-external-link-alt"></i>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                                 </a>
-                                <a href="#" class="proyecto-button-github">
-                                    <i class="fa-brands fa-github"></i>
+                                <a href="#" class="proyecto-button-github" aria-label="Ver código en GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </article>
                     
                     <!-- Proyecto 2, Turnera Nutri-->
-                    <div class="proyecto-item" data-aos="fade-up" data-aos-delay="200">
+                    <article class="proyecto-item" data-aos="fade-up" data-aos-delay="200">
                         <div class="proyecto-mockup">
                             <div class="compu-mockup">
                                 <div class="compu-screen">
                                     <div class="proyecto-preview proyecto-2">
                                         <div class="proyecto-header">
-                                            <div class="proyecto-nav">
+                                            <div class="proyecto-nav" aria-hidden="true">
                                                 <span class="nav-dot"></span>
                                                 <span class="nav-dot"></span>
                                                 <span class="nav-dot"></span>
@@ -409,7 +429,7 @@
                                         </div>
                                         <div class="proyecto-content">
                                             <h3>Vista previa del proyecto</h3>
-                                            <div class="dashboard-elements">
+                                            <div class="dashboard-elements" aria-hidden="true">
                                                 <div class="chart-placeholder"></div>
                                                 <div class="stats-grid">
                                                     <div class="stats-box"></div>
@@ -432,16 +452,16 @@
                                 <span class="proyecto-tag">Diseño Web</span>
                             </div>
                             <div class="proyecto-botones">
-                                <a href="#" class="proyecto-button">
-                                    <span>Ver Proyecto</span>
-                                    <i class="fas fa-external-link-alt"></i>
+                                <a href="#" class="proyecto-button" aria-label="Ver demo de Turnera Profesional">
+                                    <span>Ver Demo</span>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                                 </a>
-                                <a href="#" class="proyecto-button-github">
-                                    <i class="fa-brands fa-github"></i>
+                                <a href="#" class="proyecto-button-github" aria-label="Ver código en GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -452,13 +472,13 @@
             <div class="container">
                 <h2 class="section-title">Experiencia Profesional</h2>
                 <div class="experience-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
                         <div class="timeline-content">
-                            <div class="timeline-header">
+                            <header class="timeline-header">
                                 <h3>RPA Developer</h3>
                                 <span class="timeline-duration">2024 - Actualidad</span>
-                            </div>
+                            </header>
                             <p class="timeline-description">
                                 Desarrollo e implementación de soluciones de automatización de procesos robóticos (RPA) en el Municipio de Pilar.
                                 Utilización de <strong>Python y Robocorp</strong> para diseñar bots que optimizan tareas administrativas y operativas.
@@ -471,7 +491,7 @@
                                 <span class="skill-tag">Análisis de procesos</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -490,23 +510,23 @@
                            No dudes en contactarme para discutir cómo puedo contribuir a tu equipo.</p>
                         
                         <div class="contact-methods">
-                            <a href="mailto:martulopardo0@gmail.com" class="contact-button">
+                            <a href="mailto:martulopardo0@gmail.com" class="contact-button" aria-label="Enviar mail">
                                 <i class="fas fa-envelope"></i>
                                 <span>martulopardo0@gmail.com</span>
                             </a>
-                            <a href="https://www.linkedin.com/in/martina-lopardo-60a977346" class="contact-button">
+                            <a href="https://www.linkedin.com/in/martina-lopardo-60a977346" class="contact-button"  target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                                 <span>LinkedIn</span>
                             </a>
-                            <a href="#" class="contact-button">
+                            <a href="#" class="contact-button" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de GitHub">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="#" class="contact-button">
+                            <a href="#" class="contact-button" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
                                 <i class="fab fa-whatsapp"></i>
                                 <span>WhatsApp</span>
                             </a>
-                            <a href="#" class="contact-button">
+                            <a href="#" class="contact-button" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
                                 <i class="fab fa-file-download"></i>
                                 <span>Descargar CV</span>
                             </a>
@@ -516,20 +536,23 @@
                     <div class="contact-form">
                         <form class="form">
                             <div class="form-group">
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" required aria-describedby="name-error">
                                 <label for="name">Nombre</label>
+                                <span id="name-error" class="error-message" role="alert"></span>
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" required aria-describedby="email-error">
                                 <label for="email">Email</label>
+                                <span id="email-error" class="error-message" role="alert"></span>
                             </div>
                             <div class="form-group">
-                                <textarea id="message" name="message" required></textarea>
+                                <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
                                 <label for="message">Mensaje</label>
+                                <span id="message-error" class="error-message" role="alert"></span>
                             </div>
                             <button type="submit" class="submit-button">
                                 <span>Enviar mensaje</span>
-                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </button>
                         </form>
                     </div>
@@ -541,20 +564,25 @@
 
     
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Mi Portafolio.  Todos los derechos reservados.  Diseñado con pasión por la tecnología.</p>
             <a href="mailto:martulopardo0@gmail.com" class="footer-email">martulopardo0@gmail.com</a>
         </div>
     </footer>
 
+    
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                once: true,
+                disable: 'mobile'
+            });
+        }
     </script>
 </body>
 </html>

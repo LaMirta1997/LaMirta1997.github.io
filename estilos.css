@@ -1,5 +1,7 @@
 /* Reset y configuración base */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,14 +24,14 @@
     --dark-card-bg: #1f1f23;
     --dark-border: rgba(139, 92, 246, 0.2);
     
-    /*violetas (constantes) */
+    /*violetas */
     --primary-violet: #8b5cf6;
     --secondary-violet: #a78bfa;
     --tertiary-violet: #c4b5fd;
     --accent-violet: #6d28d9;
     
     /* Tipografía */
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-secondary: 'Courier New', Courier, monospace;
 
     /* Espaciado */
@@ -39,6 +41,14 @@
     /* Transiciones */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal: 1040;
+    --z-popover: 1050;
+    --z-tooltip: 1060;
 }
 
 /* colores para el Tema oscuro */
@@ -49,8 +59,8 @@
     --text-secondary: var(--dark-text-secondary);
     --card-bg: var(--dark-card-bg);
     --border-color: var(--dark-border);
-    --text-head-primary: var(--dark-text-primary); /* Ajuste para mejor contraste en oscuro */
-    --text-head-secondary: var(--secondary-violet); /* Ajuste para mejor contraste en oscuro */
+    --text-head-primary: var(--dark-text-primary); 
+    --text-head-secondary: var(--secondary-violet); 
 }
 
 /* para el Tema claro */
@@ -69,6 +79,12 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
     font-family: var(--font-primary);
     line-height: 1.6;
@@ -76,6 +92,23 @@ body {
     background-color: var(--bg-primary);
     overflow-x: hidden;
     transition: var(--transition-smooth);
+    font-size: 16px;
+}
+
+
+/* Mejoras de accesibilidad para focus */
+*:focus {
+  outline: 2px solid var(--primary-violet);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary-violet);
+  outline-offset: 2px;
 }
 
 
@@ -92,7 +125,7 @@ body {
     background: linear-gradient(135deg, var(--primary-violet), var(--secondary-violet));
     color: white;
     cursor: pointer;
-    z-index: 1000;
+    z-index: var(--z-fixed);
     box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
     transition: var(--transition-smooth);
     display: flex;
@@ -103,6 +136,11 @@ body {
 .theme-toggle:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 .toggle-icon {
@@ -177,6 +215,12 @@ body {
     pointer-events: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .hero::before {
+    animation: none;
+  }
+}
+
 .hero-content {
     text-align: center;
     z-index: 2;
@@ -194,9 +238,12 @@ body {
     fillIn 1s ease forwards 4s; /* cuado termina de dibujar la letra la "rellena" */
 }
 
-.space {
-    width: 0.5em;
-    display: inline-block;
+@media (prefers-reduced-motion: reduce) {
+  #nombre_path {
+    animation: none;
+    stroke-dashoffset: 0;
+    fill: var(--text-head-primary);
+  }
 }
 
 .hero-subtitle {
@@ -204,7 +251,16 @@ body {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
     font-weight: 400;
     color: var(--text-head-primary);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-subtitle {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-description {
@@ -214,6 +270,15 @@ body {
     white-space: nowrap;
     width: 0;
     animation: typing 3s steps(30, end) 2s forwards, blink 1s step-end infinite 5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-description {
+    animation: none;
+    width: auto;
+    border-right: none;
+    white-space: normal;
+  }
 }
 
 .hero-description p {
@@ -233,18 +298,13 @@ body {
     font-size: 1.5rem;
 }
 
-.scroll-arrow::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -4px;
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid var(--secondary-violet);
-    border-bottom: 2px solid var(--secondary-violet);
-    transform: rotate(45deg);
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator {
+    animation: none;
+  }
 }
 
+/*Animacioness */
 @keyframes backgroundShift {
     0%, 100% { transform: translateX(-100%); }
     50% { transform: translateX(100%); }
@@ -285,7 +345,7 @@ body {
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 66ch; }
+    to { width: 62ch; }
 }
 
 @keyframes blink {
@@ -308,7 +368,7 @@ body {
     background: rgba(var(--bg-primary), 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
-    z-index: 100;
+    z-index: var(--z-sticky);
     transition: var(--transition-smooth);
 }
 
@@ -332,7 +392,7 @@ body {
     position: relative;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link:focus {
     color: var(--primary-violet);
     background: rgba(139, 92, 246, 0.1);
     transform: translateY(-2px);
@@ -387,7 +447,7 @@ body {
     grid-template-columns: 1fr 300px;
     gap: 4rem;
     align-items: center;
-    margin-bottom: 4rem;
+    margin-bottom: 9rem;
 }
 
 .about-title {
@@ -433,12 +493,6 @@ body {
     font-style: italic;
     padding-left: 1rem;
     border-left: 3px solid var(--primary-violet);
-}
-
-.about-stats-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .stats-grid {
@@ -604,6 +658,12 @@ body {
     animation: float 3s ease-in-out infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .image-placeholder {
+    animation: none;
+  }
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -724,6 +784,50 @@ body {
     border-radius: 4px;
     width: 0;
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/* Habilidades personales */
+.softskills-section {
+    background: var(--bg-primary);
+    padding: var(--section-padding);
+}
+
+.softskills-list {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.softskills-list li {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+  position: relative;
+  padding-left: 3rem;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+}
+
+.softskills-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-violet);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.softskills-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
 }
 
 
