@@ -14,20 +14,10 @@ function createPuntos() {
     for (let i = 0; i < puntosCount; i++) {
         const punto = document.createElement('div');
         punto.className = 'particle';
-        punto.style.cssText = `
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: #8b5cf6;
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.5;
-            animation: float ${Math.random() * 3 + 2}s linear infinite;
-        `;
-        
         punto.style.left = Math.random() * 100 + '%';
         punto.style.top = Math.random() * 100 + '%';
         punto.style.animationDelay = Math.random() * 2 + 's';
+        punto.style.animationDuration = (Math.random() * 3 + 2) + 's';
 
         hero.appendChild(punto);
     }

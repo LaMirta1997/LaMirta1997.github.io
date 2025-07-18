@@ -539,8 +539,19 @@ body {
 }
 
 .degree {
+    display: flex;
+    flex-direction: column;
+}
+
+.degree-name {
     color: var(--text-primary);
     font-weight: 500;
+}
+
+.degree-place {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 400;
 }
 
 .status {
@@ -1391,4 +1402,26 @@ body {
     outline: none;
     border-color: var(--primary-violet);
     box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+
+/* Color base de las partículas */
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.5;
+    animation: float 5s linear infinite; 
+}
+
+/* Color para modo claro */
+.light-theme .particle {
+    background-color: #2a0d5c;
+}
+
+/* Color para modo oscuro */
+.dark-theme .particle {
+    background-color: #916cff; 
 }
