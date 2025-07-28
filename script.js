@@ -1,6 +1,6 @@
 // Animaciones de scroll
 const observerOptions = {
-    threshold: 0.1,
+    threshold: 0.2,
     rootMargin: '0px 0px -50px 0px'
 };
 
@@ -26,8 +26,7 @@ function createPuntos() {
 // Crear puntos al cargar la página
 document.addEventListener('DOMContentLoaded', createPuntos);
 
-
-// Theme Toggle Functionality
+// Theme Toggle Funcionalidad
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
@@ -40,7 +39,8 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-// Cargar tema guardado
+
+// Carga tema guardado
 document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     body.className = savedTheme + '-theme';
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     const skillsSection = document.querySelector('.skills-section');
-    if (skillsSection) {
+    if (skillsSection && window.innerWidth > 768) {
         observer.observe(skillsSection);
     }
 

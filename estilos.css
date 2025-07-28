@@ -113,6 +113,8 @@ body {
 
 
 
+
+
 /* Botón toggle de día/noche */
 .theme-toggle {
     position: fixed;
@@ -361,6 +363,7 @@ body {
 
 
 
+
 /* Navegación */
 .navbar {
     position: sticky;
@@ -400,6 +403,8 @@ body {
 
 
 
+
+
 /* Secciones generales */
 .section {
     padding: var(--section-padding);
@@ -427,6 +432,8 @@ body {
     background: linear-gradient(90deg, var(--primary-violet), var(--secondary-violet));
     border-radius: 2px;
 }
+
+
 
 
 
@@ -647,16 +654,12 @@ body {
 .image-placeholder {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 8rem;
-    color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
     animation: float 3s ease-in-out infinite;
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   .image-placeholder {
@@ -668,6 +671,8 @@ body {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
 }
+
+
 
 
 
@@ -711,6 +716,8 @@ body {
 [data-aos-delay="100"].animate { transition-delay: 0.1s; }
 [data-aos-delay="200"].animate { transition-delay: 0.2s; }
 [data-aos-delay="300"].animate { transition-delay: 0.3s; }
+
+
 
 
 
@@ -788,6 +795,8 @@ body {
 
 
 
+
+
 /* Habilidades personales */
 .softskills-section {
     background: var(--bg-primary);
@@ -829,6 +838,8 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
 }
+
+
 
 
 
@@ -1010,6 +1021,10 @@ body {
   transform: translateY(-2px);
 }
 
+.proyecto-button-github-tag {
+    display: none;
+}
+
 .proyecto-botones {
   display: flex;
   gap: 1rem; 
@@ -1025,7 +1040,7 @@ body {
   background: linear-gradient(135deg, var(--primary-violet), var(--secondary-violet));
   color: white;
   text-decoration: none;
-  border-radius: 15px;
+  border-radius: 25px;
   font-weight: 600;
   transition: var(--transition-smooth);
   align-self: flex-start;  
@@ -1379,6 +1394,8 @@ body {
 
 
 
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     :root {
@@ -1393,6 +1410,7 @@ body {
         height: 50px;
     }
     
+    /* navegación */
     .nav-container {
         padding: 1rem;
         gap: 1rem;
@@ -1403,22 +1421,123 @@ body {
         font-size: 0.9rem;
     }
     
+
+    /* Sobre mi */
     .about-content-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        "title image"
+        "description description";
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .about-text-section {
+        grid-area: title;
     }
     
     .about-details-grid {
+        display: grid;
         grid-template-columns: 1fr;
     }
-    
+
+    .about-image {
+        grid-area: image;
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .image-placeholder {
-        width: 200px;
-        height: 200px;
-        font-size: 6rem;
+        width: 150px;
+        height: auto;
+    }
+
+    .about-image .image-placeholder img {
+        width: 150px;
+        height: auto;
+    }
+
+    .about-description {
+        grid-area: description;
+        margin-top: 1rem;
+    }
+
+    .about-text-section .about-title {
+        margin-bottom: 0;
+    }
+
+    .about-description {
+        margin-top: 1rem;
     }
     
+
+    /* proyectos */
+    .proyecto-mockup {
+        display: none;
+    }
+
+    .proyecto-info {
+        background: black;
+        border-radius: 20px;
+        padding: 1.5rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .proyecto-item {
+        grid-template-columns: 2fr;
+        gap: 2rem;
+    }
+
+    .proyecto-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .proyecto-button, .proyecto-button-github{
+        display: none;
+    }
+
+    .proyecto-tag {
+        order: 1;
+        flex: 1;
+        text-align: left;
+    }
+
+    .proyecto-button-github-tag {
+        display: flex;
+        text-align: right;
+        align-items: center;
+        justify-content: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: linear-gradient(135deg, var(--primary-violet), var(--secondary-violet));
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: var(--transition-smooth);
+        align-self: flex-start;  
+        font-size: 1.7rem;
+    }
+
+    .proyecto-button-github-tag:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px var(--accent-violet);
+    }
+
+    .proyecto-info h3 {
+        margin-top: 5px;
+        color: var(--primary-violet);
+    }
+
+    .proyecto-info p {
+        margin-bottom: 5px;
+    }
+
+
     .stats-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
@@ -1426,6 +1545,14 @@ body {
     
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skill-progress {
+        height: 100%;
+        background: linear-gradient(90deg, var(--primary-violet), var(--secondary-violet));
+        border-radius: 4px;
+        width: 0;
+        transition: width 2s ease-in-out;
     }
     
     .contact-content {
@@ -1478,6 +1605,19 @@ body {
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .proyecto-info p {
+        font-size: 0.95rem;
+    }
+
+    .proyecto-tag {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
     }
 }
 
