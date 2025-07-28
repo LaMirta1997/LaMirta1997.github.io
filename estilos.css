@@ -1021,7 +1021,8 @@ body {
   transform: translateY(-2px);
 }
 
-.proyecto-button-github-tag {
+.proyecto-button-github-tag,
+.proyecto-button-github-tag i {
     display: none;
 }
 
