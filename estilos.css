@@ -7,6 +7,8 @@
     box-sizing: border-box;
 }
 
+
+
 :root {
     /* Colores para tema claro */
     --light-bg-primary: #ffffff;
@@ -77,6 +79,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -93,6 +97,7 @@ body {
     overflow-x: hidden;
     transition: var(--transition-smooth);
     font-size: 16px;
+    max-width: 100vw;
 }
 
 
@@ -227,17 +232,20 @@ body {
     text-align: center;
     z-index: 2;
     position: relative;
+    width: 75vw;
+    height: auto;
+    max-height: 100px;
 }
 
 #nombre_path {
     fill: none;
     stroke: var(--text-head-primary);
-    stroke-width: 1;
+    stroke-width: 0.7;
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: 
     draw 4s ease forwards, 
-    fillIn 1s ease forwards 4s; /* cuado termina de dibujar la letra la "rellena" */
+    fillIn 1s ease forwards 4s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1397,13 +1405,20 @@ body {
 
 
 
+
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     :root {
         --section-padding: 3rem 0;
         --container-padding: 0 1rem;
     }
-    
+
+    .container {
+        margin: 1rem;
+    }
+
     .theme-toggle {
         bottom: 1rem;
         right: 1rem;
@@ -1411,6 +1426,37 @@ body {
         height: 50px;
     }
     
+    /* hero */
+    .hero_content {
+        width: 70vw;
+        height: auto;
+        max-height: 120px;
+    }
+
+    #nombre_path {
+        stroke-width: 0.5;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+        padding: 0 2rem;
+    }
+    
+    .hero-description {
+        width: 80vw;
+        max-width: 100%;
+        padding: 0 2rem;
+        white-space: normal;
+        text-align: center;
+        border: none;
+        animation:  fadeInUp 1s ease forwards;
+    }
+
+    .hero-description p {
+        font-size: 0.75rem;
+    }
+
+
     /* navegación */
     .nav-container {
         padding: 1rem;
@@ -1425,13 +1471,10 @@ body {
 
     /* Sobre mi */
     .about-content-wrapper {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-areas:
-        "title image"
-        "description description";
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .about-text-section {
@@ -1459,19 +1502,19 @@ body {
         height: auto;
     }
 
-    .about-description {
-        grid-area: description;
-        margin-top: 1rem;
-    }
-
     .about-text-section .about-title {
         margin-bottom: 0;
     }
 
-    .about-description {
-        margin-top: 1rem;
+    .about-mission {
+        font-size: 14px;
     }
-    
+
+    .detail-card {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+    }
+
 
     /* proyectos */
     .proyecto-mockup {
@@ -1488,6 +1531,8 @@ body {
     .proyecto-item {
         grid-template-columns: 2fr;
         gap: 2rem;
+        opacity: 1 !important;
+        transform: translateX(0) !important;
     }
 
     .proyecto-buttons {
@@ -1502,19 +1547,27 @@ body {
         display: none;
     }
 
+    .proyecto-tags {
+        justify-content: center;
+    }
+
     .proyecto-tag {
         order: 1;
         flex: 1;
-        text-align: left;
+        min-width: 80px;
+        padding: 0.4rem 1rem;
+        text-align: center;
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
-
+/*
     .proyecto-button-github-tag {
         display: flex;
         text-align: right;
         align-items: center;
         justify-content: center;
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2rem;
+        height: 2rem;
         background: linear-gradient(135deg, var(--primary-violet), var(--secondary-violet));
         color: white;
         text-decoration: none;
@@ -1528,7 +1581,7 @@ body {
         transform: translateY(-3px);
         box-shadow: 0 8px 30px var(--accent-violet);
     }
-
+*/
     .proyecto-info h3 {
         margin-top: 5px;
         color: var(--primary-violet);
@@ -1537,6 +1590,7 @@ body {
     .proyecto-info p {
         margin-bottom: 5px;
     }
+
 
 
     .stats-grid {
@@ -1617,7 +1671,7 @@ body {
     }
 
     .proyecto-tag {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
         padding: 0.2rem 0.5rem;
     }
 }
@@ -1711,3 +1765,4 @@ body {
 .dark-theme .particle {
     background-color: #916cff; 
 }
+

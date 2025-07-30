@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 entry.target.classList.add('animate');
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.7 });
 
     document.querySelectorAll('[data-aos]').forEach(el => {
         aboutObserver.observe(el);
